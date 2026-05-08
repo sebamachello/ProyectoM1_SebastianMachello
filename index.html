@@ -6,7 +6,6 @@
 <title>ColorFly Generator</title>
 <link rel="stylesheet" href="styles.css">
 
-
 </head>
 
 <body>
@@ -24,19 +23,28 @@
     <div class="color-box"><span>#FFFFFF</span></div>
     
     </div>
-
+    
+    <div class="controles">
     <label for="dropdown">Cantidad de colores:</label>
 
     <select id="dropdown">
-    <option value="6">6</option>
-    <option value="8">8</option>
-    <option value="9">9</option>
+    <option value="6">6 Colores</option>
+    <option value="8">8 Colores</option>
+    <option value="9">9 Colores</option>
     
     </select>
+    <label for="formato">Formato de Colores</label>
+    <select id="formato">
+        <option value="hex">Hex</option>
+        <option value="hsl">Hsl</option>
+
+    </select>    
+
     <button id="generate">Generar paleta</button>
+    
+    </div>
+    
     <p id="mensaje"></p>
-    
-    
 </main>
 
 <script src="script.js" defer></script>
