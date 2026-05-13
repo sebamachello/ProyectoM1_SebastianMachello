@@ -6,7 +6,12 @@ box-sizing: border-box;
 body {
 
     font-family: Arial, sans-serif;
-    background: #0f0f0f;
+background:
+radial-gradient(at 20% 20%, #3a3a3a 0px, transparent 50%),
+radial-gradient(at 80% 0%, #032548 0px, transparent 50%),
+radial-gradient(at 0% 50%, #02022f 0px, transparent 50%),
+#1c0734;
+
     color: white;
     text-align: center;
     display: flex;
