@@ -22,7 +22,27 @@ const l = Math.floor(Math.random() * 40) + 30;
 const button = document.getElementById("generate");
 
 
-button.addEventListener("click", cambiarColores);
+button.addEventListener("click", function() {
+  cambiarColores();
+
+  mostrarMensaje();
+});
+
+function mostrarMensaje() {
+
+  const mensaje = document.getElementById("mensaje");
+
+  mensaje.textContent = "✅ Paleta Generada";
+  mensaje.style.opacity = "1";
+  mensaje.style.transform = "translateY(0)";
+
+  function borrarMensaje() {
+    mensaje.style.opacity = "0";
+    mensaje.style.transform = "translateY(10px)";
+  }
+
+  setTimeout(borrarMensaje, 2000);
+}
 
 
 function cambiarColores() {
@@ -32,10 +52,14 @@ function cambiarColores() {
   
   const formato = document.getElementById("formato")
   const tipoColor = formato.value;
+
+  localStorage.setItem("cantidad", cantidad);
+localStorage.setItem("formato", tipoColor);
   
   const palette = document.querySelector(".palette");
 
   palette.innerHTML = "";
+  
 
   for (let i = 0; i < cantidad; i++) {
 
@@ -58,20 +82,26 @@ function cambiarColores() {
     box.appendChild(span);
     palette.appendChild(box);
 
+    
+
   }
 
-  const mensaje = document.getElementById("mensaje");
-
-mensaje.textContent = "Paleta Generada";
-mensaje.style.opacity = "1";
-
-function borrarMensaje() {
-    mensaje.style.opacity = "0";
-}
-
-setTimeout(borrarMensaje, 2000);
+  
     
 }
+
+const cantidadGuardada = localStorage.getItem("cantidad");
+const formatoGuardado = localStorage.getItem("formato");
+
+if (cantidadGuardada) {
+  document.getElementById("dropdown").value = cantidadGuardada;
+}
+
+if (formatoGuardado) {
+  document.getElementById("formato").value = formatoGuardado;
+}
+
+cambiarColores();
 
 
 

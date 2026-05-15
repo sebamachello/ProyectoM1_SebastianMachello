@@ -19,6 +19,7 @@ radial-gradient(at 0% 50%, #02022f 0px, transparent 50%),
     align-items: center;
     margin: 0;
     
+  min-height: 100vh;
   
 
 }
@@ -33,29 +34,34 @@ main {
 }
 
 .palette {
-  width: 100%;
-display: flex;
-height: 75vh;
-margin-top: 40px;
-border-radius: 12px;
+width: 100%;
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+
+  margin-top: 40px;
 
 }
 
 .color-box {
-  flex: 1;
-  
-  flex-direction: column;
+  width: 220px;
+  height: 220px;
+
   display: flex;
+  flex-direction: column;
   justify-content: flex-end;
   align-items: flex-start;
-  border-radius: 5px;
+
+  padding: 15px;
+  border-radius: 12px;
 
   transition: transform 0.2s ease;
-  height: 100%;
 }
 
 .color-box:hover {
-    transform: scale(1.05);
+    transform: scale(1.02);
     filter: brightness(1.1);
 }
 
@@ -96,14 +102,34 @@ select:focus {
   font-size: 14px;
   color: #c7ccccd8;
   opacity: 0;
-  transition: opacity 0.3s ease;
+  transition: opacity 0.3s ease; margin-top: 20px;
+
+  padding: 12px 24px;
+
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+
+  border-radius: 12px;
+
+  font-size: 16px;
+  font-weight: bold;
+  color: white;
+
+  backdrop-filter: blur(5px);
+
+  opacity: 0;
+
+  transition: opacity 0.3s ease,
+              transform 0.3s ease;
+
+  transform: translateY(10px);
 }
 
 .controles {
   display: flex;
   gap: 15px;
   align-items: center;
-  margin-top: 20px;
+  margin-top: 70px
 }
 
 select {
