@@ -16,23 +16,35 @@ const s = Math.floor(Math.random() * 40) + 60;
 const l = Math.floor(Math.random() * 40) + 30;
 
   return `hsl(${h}, ${s}%, ${l}%)`;
+  
+  
 }
 
 
 const button = document.getElementById("generate");
 
+ const formatoSelect = document.getElementById("formato");
+
+formatoSelect.addEventListener("change", function() {
+
+  const formatoElegido = formatoSelect.value;
+
+  mostrarMensaje("🔄 Formato cambiado a " + formatoElegido);
+
+});   
 
 button.addEventListener("click", function() {
   cambiarColores();
 
-  mostrarMensaje();
+  mostrarMensaje("✅ Paleta Generada");
 });
 
-function mostrarMensaje() {
+function mostrarMensaje(texto) {
 
   const mensaje = document.getElementById("mensaje");
+  
 
-  mensaje.textContent = "✅ Paleta Generada";
+  mensaje.textContent = texto;
   mensaje.style.opacity = "1";
   mensaje.style.transform = "translateY(0)";
 
