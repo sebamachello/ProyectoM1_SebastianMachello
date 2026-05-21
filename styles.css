@@ -129,7 +129,7 @@ select:focus {
   display: flex;
   gap: 15px;
   align-items: center;
-  margin-top: 80px
+  margin-top: 75px
 }
 
 select {
@@ -141,5 +141,28 @@ select {
   cursor: pointer;
 }
 
+h1 {
+  font-size: 3rem;
 
+  margin-top: 40px;
+
+  font-weight: bold;
+
+  background: linear-gradient(90deg, #ffffff, #1f36dfee);
+
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  letter-spacing: 1px;
+}
+
+h2 {
+  margin-top: 10px;
+
+  color: rgba(255,255,255,0.7);
+
+  font-weight: normal;
+
+  font-size: 1.6rem;
+}
 
