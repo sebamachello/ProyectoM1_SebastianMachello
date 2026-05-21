@@ -151,6 +151,8 @@ h1 {
   background: linear-gradient(90deg, #ffffff, #1f36dfee);
 
   -webkit-background-clip: text;
+  background-clip: text;
+  
   -webkit-text-fill-color: transparent;
 
   letter-spacing: 1px;
